@@ -1,0 +1,40 @@
+def calculadora(op,n1,n2):
+  if(op == 1):
+    resultado = n1 + n2
+    res = print("A soma de",n1,"+",n2,"=",resultado)
+  elif(op == 2):
+    resultado = n1 - n2
+    res = print("A subtração de",n1,"-",n2,"=",resultado)
+  elif(op == 3):
+    resultado = n1 * n2
+    res = print("A multiplicação de",n1,"*",n2,"=",resultado)
+  elif(op == 4):
+    if(n2 != 0):
+      resultado = n1 / n2
+      res = print("A divisão de",n1,"/",n2,"=",resultado)
+    else:
+      res = print("ERRo")
+  else:
+    res = 'Essa opção não existe.'
+  return res
+
+
+while(True):
+  print("------------------------------")
+  print("-> 1-para somar")
+  print("\n-> 2-para subtrair")
+  print("\n-> 3-para multiplicar")
+  print("\n-> 4-para dividir")
+  print("\n-> 0-para sair do programa")
+  print("------------------------------")
+  operacao = int(input("Digite o valor do operador que deseja execultar:"))
+  if (operacao == 0):
+    print("O programa foi finalizado!!!")
+    break
+  elif (operacao >= 5):
+    print("Você não escolhou um operador, tente novamente!!!")
+  else:
+    numero1 = float(input("Digite um número: "))
+    numero2 = float(input("Digite outro número: "))
+
+    resposta = calculadora(operacao, numero1, numero2)
